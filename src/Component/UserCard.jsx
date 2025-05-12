@@ -1,6 +1,6 @@
 import "./UserCard.css";
 
-export default function UserCard({ user }) {
+export default function UserCard({ user,children }) {
     return (
         <div className="user-card">
             <div className="picture">
@@ -15,6 +15,7 @@ export default function UserCard({ user }) {
             <div className="email">
                 {user.email}
             </div>
+            {children}
         </div>
     )
 }

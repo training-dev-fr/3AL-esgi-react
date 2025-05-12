@@ -3,6 +3,8 @@ import './App.css'
 import Hello from './Component/Hello'
 import Profile from './Page/Profile'
 import UserList from './Page/UserList'
+import Counter from './Component/Counter/Counter'
+import Login from './Component/Login/Login'
 
 function App() {
   let user = {
@@ -18,6 +20,7 @@ function App() {
           <Route path="/Home" element={<Hello firstname={user} />} />
           <Route path="/Profile" element={<Profile user={user} />} />
           <Route path="/UserList" element={<UserList/>} />
+          <Route path="/Login" element={<Login/>} />
         </Routes>
       </BrowserRouter>
     </>

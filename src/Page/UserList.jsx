@@ -1,12 +1,28 @@
 import "./UserList.css";
-import listUser from './../assets/user.json';
+
 import UserCard from "../Component/UserCard";
+import { useEffect, useState } from "react";
 
 export default function UserList() {
+    const [userList, setUserList] = useState([]);
+
+    useEffect(() => {
+        fetch('/user.json')
+        .then(result => result.json())
+        .then(data => setUserList(data))
+    },[]);
+    
     return (
         <div className="user-list">
             {
-                listUser.map(user => <UserCard user={user} />)
+                userList.map(user => {
+                    return (
+                        <UserCard user={user}>
+                            <button> Ajouter aux amis</button>
+                        </UserCard>
+                    )
+                }
+                )
             }
         </div>
     )
