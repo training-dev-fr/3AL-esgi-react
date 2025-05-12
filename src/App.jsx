@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Hello from './Component/Hello'
 import Profile from './Page/Profile'
+import UserList from './Page/UserList'
 
 function App() {
   let user = {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/Home" element={<Hello firstname={user} />} />
           <Route path="/Profile" element={<Profile user={user} />} />
+          <Route path="/UserList" element={<UserList/>} />
         </Routes>
       </BrowserRouter>
     </>
