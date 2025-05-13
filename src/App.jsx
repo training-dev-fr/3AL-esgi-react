@@ -1,10 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Hello from './Component/Hello'
-import Profile from './Page/Profile'
-import UserList from './Page/UserList'
-import Counter from './Component/Counter/Counter'
-import Login from './Component/Login/Login'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import Hello from './Component/Hello';
+import Profile from './Page/Profile';
+import UserList from './Page/UserList';
+import Login from './Component/Login/Login';
 
 function App() {
   let user = {

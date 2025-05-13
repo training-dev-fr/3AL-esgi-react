@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
+import PasswordField from "../PasswordField/PasswordField";
 
 export default function Login(){
     const [email, setEmail] = useState();
@@ -14,6 +15,10 @@ export default function Login(){
         })
     }
 
+    function onPasswordChange(value){
+        setPassword(value);
+    }
+
     return (
         <div className="form">
            <div className="form-group">
@@ -22,7 +27,8 @@ export default function Login(){
            </div>
            <div className="form-group">
                 <label htmlFor="password">Mot de passe</label>
-                <input type="password" name="password" id="password" onKeyUp={(e) => setPassword(e.target.value)} />
+                <PasswordField onKeyUp={onPasswordChange} />
+                {/* <input type="password" name="password" id="password" onKeyUp={(e) => setPassword(e.target.value)} /> */}
            </div>
            <div className="form-group">
                 <button onClick={login}>Connexion</button>
