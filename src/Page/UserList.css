@@ -4,3 +4,7 @@
     flex-wrap: wrap;
     gap: 20px 0px
 }
+
+.button-page .active{
+    background-color: #1565c0;
+}
